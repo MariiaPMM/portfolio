@@ -4,18 +4,48 @@
 			<h1>{{ name }}</h1>
 			<p>{{ title }}</p>
 			<div class="links">
-				<a :href="github" target="_blank" class="btn">GitHub</a>
-				<a :href="cv" target="_blank" class="btn">Моє CV</a>
-				<a href="https://www.linkedin.com/in/mariia-pastukh-b34879326" target="_blank" class="btn">LinkedIn</a>
+				<a
+					:href="github"
+					target="_blank"
+					class="btn"
+					>GitHub</a
+				>
+				<a
+					:href="cv"
+					target="_blank"
+					class="btn"
+					>Моє CV</a
+				>
+				<a
+					:href="cr"
+					target="_blank"
+					class="btn"
+					>Сертифікат</a
+				>
+				<a
+					href="https://www.linkedin.com/in/mariia-pastukh-b34879326"
+					target="_blank"
+					class="btn"
+					>LinkedIn</a
+				>
 			</div>
 		</section>
 
 		<section class="projects">
 			<h2>Проєкти</h2>
-			<div class="project" v-for="project in projects" :key="project.name">
+			<div
+				class="project"
+				v-for="project in projects"
+				:key="project.name"
+			>
 				<h3>{{ project.name }}</h3>
 				<p>{{ project.description }}</p>
-				<a :href="project.link" target="_blank" class="project-link">Переглянути</a>
+				<a
+					:href="project.link"
+					target="_blank"
+					class="project-link"
+					>Переглянути</a
+				>
 			</div>
 		</section>
 
@@ -30,7 +60,7 @@
 
 <script>
 import cvFile from '@/assets/my-cv.pdf';
-
+import crFile from '@/assets/cr.pdf';
 export default {
 	name: 'HomeView',
 	data() {
@@ -40,6 +70,7 @@ export default {
 				'Frontend Developer | Vue.js | JavaScript | CSS, SASS | HTML | BEM | Pinia | Vue Router | GitHub | Git | REST API',
 			github: 'https://github.com/MariiaPMM',
 			cv: cvFile,
+			cr: crFile,
 			email: 'mahka230@gmail.com',
 			projects: [
 				{
