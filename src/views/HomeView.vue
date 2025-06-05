@@ -60,7 +60,7 @@
 
 <script>
 import cvFile from '@/assets/my-cv.pdf';
-import crFile from '@/assets/cr.pdf';
+import crFile from '@/assets/my-cr.pdf';
 export default {
 	name: 'HomeView',
 	data() {
